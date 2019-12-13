@@ -9,7 +9,7 @@ public class Competencerequise implements Strategytaskworker {
     Date db, df, DB, DF;
     String S;
     float out, out2;
-    public void association(ArrayList<Worker> T, Task t) {
+    public ArrayList<Task> association(ArrayList<Worker> T, Task t) {
         S = t.getSkill();
         DB = t.getDatedebut();
         DF = t.getDatefin();
@@ -27,12 +27,13 @@ public class Competencerequise implements Strategytaskworker {
                         db = t.getDatedebut();
                         out2 = DF.compareTo(db);
                         if(out2<0){
-
+                            y.add(j+1, t);
                             break;
                         }
                     }
                 }
             }
         }
+        return y;
     }
 }

@@ -66,7 +66,7 @@ public class Task implements Strategytaskworker, Componentressoucretask {
     }
 
     @Override
-    public void association(ArrayList<Worker> T, String S) {
-
+    public ArrayList<Task> association(ArrayList<Worker> T, Task t) {
+        return null;
     }
 }
