@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Worker extends Personne{
     public String statutworker;
     public String skill;
+    public ArrayList<Task> tache;
     Worker(){
 
     };
@@ -17,7 +18,6 @@ public class Worker extends Personne{
         skill = lectureClavier2.next();
     }
 
-    public ArrayList<Task> tache;
     public ArrayList<Task> getTache() {
         return tache;
     }

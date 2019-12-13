@@ -5,11 +5,11 @@ public class Competencerequise implements Strategytaskworker {
     Worker s;
     String x;
     ArrayList<Task> y;
-    Task t;
+    Task ta;
     Date db, df, DB, DF;
     String S;
     float out, out2;
-    public ArrayList<Task> association(ArrayList<Worker> T, Task t) {
+    public void association(ArrayList<Worker> T, Task t) {
         S = t.getSkill();
         DB = t.getDatedebut();
         DF = t.getDatefin();
@@ -19,21 +19,21 @@ public class Competencerequise implements Strategytaskworker {
             if (x == S){
                 y = s.getTache();
                 for (int j=0; j<y.size(); j++){
-                    t = y.get(j);
-                    df = t.getDatefin();
+                    ta = y.get(j);
+                    df = ta.getDatefin();
                     out = df.compareTo(DB);
                     if (out<0){
-                        t = y.get(j+1);
-                        db = t.getDatedebut();
+                        ta = y.get(j+1);
+                        db = ta.getDatedebut();
                         out2 = DF.compareTo(db);
                         if(out2<0){
-                            y.add(j+1, t);
+                            y.add(j+1, ta);
+                            s.setTache(y);
                             break;
                         }
                     }
                 }
             }
         }
-        return y;
     }
 }
