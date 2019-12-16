@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Algorithm {
-    public void main() throws ParseException {
+    public void main(String[] args) throws ParseException {
         String S;
         ArrayList<Worker> T = new ArrayList<>();
         int n;
