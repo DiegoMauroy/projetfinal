@@ -18,7 +18,7 @@
     <maven.compiler.target>11</maven.compiler.target>
     <maven.enforcer.require.version>[11,)</maven.enforcer.require.version>
     <maven.enforcer.require.message>Please use at least Java 11</maven.enforcer.require.message>
-    <java.main.class>be.ac.umons.App</java.main.class>
+    <java.main.class>be.ac.umons.Algorithm</java.main.class>
   </properties>
 
   <dependencies>
